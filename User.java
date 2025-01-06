@@ -55,17 +55,14 @@
     /** Makes this user follow the given name. If successful, returns true. 
      *  If this user already follows the given name, or if the follows list is full, does nothing and returns false; */
     public boolean addFollowee(String name) {
-        if(follows(name) == true){
+        if (follows(name) || fCount >= maxfCount) {
             return false;
         }
-        if(fCount >= maxfCount){
-            return false;
-        }else{
-            follows[fCount] = name;
-            fCount++;
-            return true;
+        follows[fCount] = name;
+        fCount++;
+        return true;
         } 
-    }
+
 
     /** Removes the given name from the follows list of this user. If successful, returns true.
      *  If the name is not in the list, does nothing and returns false. */
