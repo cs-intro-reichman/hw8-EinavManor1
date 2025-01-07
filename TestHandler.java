@@ -306,7 +306,7 @@ public class TestHandler {
         String expected = "true";
         String actual = "";
         try {
-            actual += (alice.addFollowee("Foo") && alice.addFollowee("Bar") && alice.addFollowee("Baz") && alice.getfCount() == 2 && alice.follows("Foo"));
+            actual += (alice.addFollowee("Foo") && alice.addFollowee("Bar") && alice.addFollowee("Baz") && alice.getfCount() == 3 && alice.follows("Foo"));
         } catch (Exception e) {
             actual = TesterMessagesEnum.ERROR + e.getMessage();
         }
