@@ -1,3 +1,5 @@
+
+
 /** Represents a user in a social network. A user is characterized by a name,
  *  a list of user names that s/he follows, and the list's size. */
  public class User {
@@ -43,14 +45,12 @@
 
     /** If this user follows the given name, returns true; otherwise returns false. */
     public boolean follows(String name) {
-        for(int i =0 ; i < fCount;){
-            if(name.equals(getfFollows()[i])){
+        for (int i = 0; i < fCount; i++) {
+            if (follows[i].equals(name)) {
                 return true;
-            }else{
-                i++;
             }
         }
-            return false;
+        return false;
     }
 
     /** Makes this user follow the given name. If successful, returns true. 
